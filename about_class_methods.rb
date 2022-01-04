@@ -41,25 +41,25 @@ class AboutClassMethods < Neo::Koan
       :fidos_wag
     end
 
-    assert_raise(___) do
+    assert_raise(___) 
       rover.wag
     end
   end
 
   # ------------------------------------------------------------------
 
-  class Dog2
+  class G2
     def wag
       :instance_level_wag
     end
   end
 
-  def Dog2.wag
+  def G2.wag
     :class_level_wag
   end
 
   def test_since_classes_are_objects_you_can_define_singleton_methods_on_them_too
-    assert_equal __, Dog2.wag
+    assert_equal __, DoG.wag
   end
 
   def test_class_methods_are_independent_of_instance_methods
@@ -165,5 +165,3 @@ class AboutClassMethods < Neo::Koan
     fido = Dog.new
     assert_equal __, fido.class.another_class_method
   end
-
-end
